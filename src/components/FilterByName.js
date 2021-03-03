@@ -12,7 +12,11 @@ const FilterByName = props => {
         <label htmlFor="name">
             Filter by name:
         </label>
-        <input type="text" name="name" id="name" onChange={handleChange}/>
+        <input type="text" 
+        name="name" 
+        id="name" 
+        placeholder="Character's name goes here"
+        onChange={handleChange}/>
         </>
     )
 }

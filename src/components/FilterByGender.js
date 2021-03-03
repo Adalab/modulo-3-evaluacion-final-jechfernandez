@@ -5,7 +5,7 @@ const FilterByGender = props => {
     const handleChange = (ev) =>{
         props.handleFilter({
             key: 'gender', 
-            value: ev.target.value
+            value: ev.target.value,
         });
     }
     return(

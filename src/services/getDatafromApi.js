@@ -10,6 +10,8 @@ const getDataFromApi = () => {
                 status: character.status,
                 gender: character.gender,
                 image:character.image,
+                origin: character.origin.name,
+                episode: character.episode,
             };
         });
     });
@@ -18,3 +20,4 @@ const getDataFromApi = () => {
 export default getDataFromApi;
 
 //NO OLVIDAR CAMBIAR A API
+//('//rickandmortyapi.com/api/character/')

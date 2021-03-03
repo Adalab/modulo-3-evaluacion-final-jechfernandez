@@ -1,46 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import '../App.scss';
-import CharacterList from './CharacterList';
-import Filter from './Filter';
-import getDataFromApi from '../services/getDatafromApi';
+import '../stylesheets/App.scss';
+import { Route, Switch} from 'react-router-dom';
+import Header from './Header';
+import Home from './Home';
+import CharacterDetail from './CharacterDetail';
+import Footer from './Footer';
 
-
-const App = () => {
-
-  const [characters, setCharacters] = useState([]);
-  const [name, setName] = useState('');
-  const [gender, setGender] = useState('all');
-
-  useEffect(() => {
-    getDataFromApi().then(data => setCharacters(data));
-  },[]);
-
-  const handleFilter = (inputChange) => {
-    console.log(inputChange);
-    if(inputChange.key === 'name') {
-      setName(inputChange.value)
-    }
-    else if (inputChange.key === 'gender') {
-      setGender(inputChange.value)
-  }
-  };
-
-  const filterCharacter = characters.filter(character => {return character.name.toUpperCase().includes(name.toUpperCase())}).filter(character => {
-    if (gender === 'all') {
-      return true;
-    } else {
-      return character.gender === gender;
-    }
-  })
-  
+function App () {
   return (
-    <>
-    <div className="App">
-      <h1>Holi Jechi</h1>
-      <Filter handleFilter={handleFilter}/>
-      <CharacterList characters={filterCharacter} />
+    <div className="landing">
+      <div className="page">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route
+            path="/character/:id"
+            component={CharacterDetail}
+          />
+        </Switch>
+        <Footer />
+      </div>
     </div>
-    </>
   );
 }
 
