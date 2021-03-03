@@ -1,10 +1,15 @@
 import React from 'react';
 
 const CharacterList = props => {
+
+    
     return(
         <>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusantium corrupti provident vitae quisquam adipisci quam laudantium laboriosam maxime minus! Doloremque, nostrum. Maxime debitis consectetur itaque aperiam aliquid, voluptate eaque?</p>
+        <img src={props.character.image} alt=""/>
+        <h3>{props.character.name}</h3>
+        <p>{props.character.gender} {props.character.status}</p>
         </>
+
     )
 }
 
