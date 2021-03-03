@@ -10,7 +10,7 @@ const Filter = props => {
         <section>
             <form>
                 <FilterByName handleFilter={props.handleFilter}/>
-                <FilterByGender />
+                <FilterByGender handleFilter={props.handleFilter}/>
                 <FilterBySpecies />
                 <FilterByStatus />
             </form>
