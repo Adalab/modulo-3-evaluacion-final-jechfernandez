@@ -1,14 +1,26 @@
 import React from 'react';
 
 const FilterBySpecies = props => {
-    return(
-        <>
-        <label htmlFor="species">
-            Filter by species:
-        </label>
-        <input type="text" name="species" id="species"/>
-        </>
-    )
-}
-
-export default FilterBySpecies;
+    const handleChange = (ev) => {
+      props.handleFilter({
+        key: 'species',
+        value: ev.target.value,
+      });
+    };
+    return (
+      <>
+        <label>Species:</label>
+        <select
+          className="form__input-text"
+          name="species"
+          id="species"
+          onChange={handleChange}
+        >
+          <option value="all">All species</option>
+          <option value="Alien">Alien</option>
+          <option value="Human">Human</option>
+        </select>
+      </>
+    );
+  };
+  export default FilterBySpecies;
