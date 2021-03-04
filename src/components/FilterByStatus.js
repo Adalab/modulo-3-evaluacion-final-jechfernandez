@@ -4,7 +4,7 @@ const FilterByStatus = props => {
 
     const handleChange = (ev) =>{
         props.handleFilter({
-            key: 'name', 
+            key: 'status', 
             value: ev.target.value});
     }
 
@@ -18,9 +18,9 @@ const FilterByStatus = props => {
         id="status"
         onChange={handleChange}>
             <option value="all">All statuses</option>
-            <option value="alive">Alive</option>
-            <option value="dead">Dead</option>
-            <option value="unknown">Unknown</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+            <option value="Unknown">Unknown</option>
         </select>
         </>
     )

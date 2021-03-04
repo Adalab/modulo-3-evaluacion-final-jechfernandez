@@ -5,7 +5,7 @@ import Filter from './Filter';
 import getDataFromApi from '../services/getDatafromApi';
 import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
-import CharacterDetail from './CharacterDetail';
+// import CharacterDetail from './CharacterDetail';
 import Footer from './Footer';
 
 function App () {

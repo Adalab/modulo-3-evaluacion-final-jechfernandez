@@ -15,8 +15,8 @@ const FilterByGender = props => {
         </label>
         <select name="gender" id="gender" onChange={handleChange}>
             <option value="all">All genders</option>
-            <option value="female">Female</option>
-            <option value="male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
             <option value="genderless">Genderless</option>
             <option value="unknown">Unknown</option>
         </select>

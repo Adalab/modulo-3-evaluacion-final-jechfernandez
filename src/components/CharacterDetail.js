@@ -9,6 +9,7 @@ const CharacterDetail = (props) => {
   return (
     <div>
       <Link to="/">
+        {/* <span className="fas fa-times"></span> */}
         <span className="">X</span>
       </Link>
 
