@@ -7,6 +7,7 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 // import CharacterDetail from './CharacterDetail';
 import Footer from './Footer';
+import CharacterDetail from './CharacterDetail';
 
 function App () {
   const [characters, setCharacters] = useState ([]);
@@ -30,11 +31,6 @@ function App () {
       setStatus (inputChange.value);
     }
   };
-
-  const renderDetail = (props) => {
-    console.log(props.match.params);
-    const id = parseInt(props.match.params.id);
-  }
 
   const filterCharacter = characters
     .filter (character => {
@@ -63,6 +59,17 @@ function App () {
     });
 
   console.log (filterCharacter);
+
+
+  const renderDetail = (props) => {
+    console.log(props.match.params);
+    const id = parseInt(props.match.params.id);
+    const selectCharacter = characters.find( character =>{
+      return character.id === id;
+    })
+    return < CharacterDetail character={selectCharacter}/>
+  }
+
 
   return (
     <div className="landing">

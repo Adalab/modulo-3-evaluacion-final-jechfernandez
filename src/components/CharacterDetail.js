@@ -4,12 +4,25 @@ import { Link } from 'react-router-dom'
 
 const CharacterDetail = (props) => {
   console.log(props);
+
+  if (props.character === undefined){
+    return(
+      <>
+      <Link to="/">
+                <span className="modal__close icon fas fa-undo">X</span>
+              </Link>
+      <div className="modal__text-error">
+      <p>Error: character not found</p>
+      </div>
+      </>
+    )
+  }
+
   const { name, image, gender, status, origin, location, species, episode } = props.character;
 
   return (
     <div>
       <Link to="/">
-        {/* <span className="fas fa-times"></span> */}
         <span className="">X</span>
       </Link>
 
