@@ -7,7 +7,7 @@ const FilterByStatus = props => {
             key: 'name', 
             value: ev.target.value});
     }
-    
+
     return(
         <>
         <label htmlFor="status">

@@ -1,6 +1,7 @@
 import React from 'react';
+import '../stylesheets/Character.scss';
 
-const CharacterList = props => {
+const Character = props => {
 
     return(
         <>
@@ -12,4 +13,4 @@ const CharacterList = props => {
     )
 }
 
-export default CharacterList;
+export default Character;

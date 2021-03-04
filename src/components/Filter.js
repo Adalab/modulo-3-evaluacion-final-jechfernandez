@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/Filter.scss';
 import FilterByName from './FilterByName';
 import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
