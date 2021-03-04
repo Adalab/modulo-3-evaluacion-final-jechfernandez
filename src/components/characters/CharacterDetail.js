@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/CharacterDetail.scss';
+import '../../stylesheets/characters/CharacterDetail.scss';
 import {Link} from 'react-router-dom';
 
 const CharacterDetail = props => {

@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../stylesheets/filters/FilterBySelect.scss';
+
 
 const FilterByGender = props => {
 
@@ -10,10 +12,14 @@ const FilterByGender = props => {
     }
     return(
         <>
-        <label htmlFor="gender">
+        <label 
+        className="form__label"
+        htmlFor="gender">
             Gender:
         </label>
-        <select name="gender" id="gender" onChange={handleChange}>
+        <select 
+        className="form__select"
+        name="gender" id="gender" onChange={handleChange}>
             <option value="all">All genders</option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>

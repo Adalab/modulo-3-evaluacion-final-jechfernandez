@@ -1,10 +1,25 @@
-import React from 'react'
-import '../stylesheets/Footer.scss';
+import React from 'react';
+import {Link} from "react-router-dom";
+import logo from "../images/logo-rick-n-morty.png";
+import "../stylesheets/layout/Footer.scss";
 
-export default function Footer() {
-    return (
-        <div>
-            
-        </div>
-    )
+class Footer extends React.Component {
+  render() {
+     return (
+           <footer className="footer">
+            <small className="footer__small"> Rick and Morty - Character Finder </small>
+            <Link to='/'>
+        
+          <img
+            className="footer__logo"
+            src={logo}
+            title="Go to home page"
+            alt="Mad Women"
+          />
+       </Link>
+         </footer>
+        );
+    }
 }
+
+export default Footer;

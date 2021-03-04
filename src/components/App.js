@@ -1,13 +1,12 @@
 import '../stylesheets/App.scss';
 import React, {useEffect, useState} from 'react';
-import CharacterList from './CharacterList';
-import Filter from './Filter';
-import getDataFromApi from '../services/getDatafromApi';
+import CharacterList from './characters/CharacterList';
+import Filter from './filters/Filter';
+import getDataFromApi from './services/getDatafromApi';
 import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
-// import CharacterDetail from './CharacterDetail';
 import Footer from './Footer';
-import CharacterDetail from './CharacterDetail';
+import CharacterDetail from './characters/CharacterDetail';
 
 function App () {
   const [characters, setCharacters] = useState ([]);
@@ -72,7 +71,7 @@ function App () {
 
 
   return (
-    <div className="landing">
+    <div className="app">
       <div className="page">
         <Header />
         <Switch>

@@ -1,0 +1,44 @@
+@import '../core/_reset.scss';
+@import '../core/_mixins.scss';
+@import '../core/_variables.scss';
+
+
+.link {
+  text-decoration: none;
+}
+
+.character {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 190px;
+  grid-template-rows: 85px 215px;
+  grid-template-areas: 'image' 'text';
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px rgba(163, 228, 240, 0.7);
+  text-align: center;
+  border: 3px solid $color-detail;
+  transition: all 0.2s ease-in-out;
+
+  &__img {
+    grid-area: image;
+    width: 250px;
+  }
+
+  &__text {
+    grid-area: text;
+    justify-content: flex-end;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    &--name {
+        margin: 65px 25px 0 25px;
+      color: white;
+      padding: 3px 0 5px 0;
+      background-color: rgba(38, 50, 230, 0.5);
+      border-radius: 10px;
+      font-family: $font-title;
+    }
+    &--info {
+        font-family: $font-main;
+    }
+  }
+}

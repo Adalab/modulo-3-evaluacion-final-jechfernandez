@@ -2,22 +2,9 @@
 @import './core/_reset.scss';
 @import './core/_mixins.scss';
 
-.landing {
-  height: 100vh;
-  overflow-y: auto;
-}
-
 .page {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  background-color: $color-background;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background: url('../../src/images/stars.png') center top;
 }

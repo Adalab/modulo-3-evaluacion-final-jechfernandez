@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../stylesheets/filters/FilterBySelect.scss';
 
 const FilterBySpecies = props => {
     const handleChange = (ev) => {
@@ -9,9 +10,11 @@ const FilterBySpecies = props => {
     };
     return (
       <>
-        <label>Species:</label>
+        <label
+        className="form__label"
+        htmlFor="species">Species:</label>
         <select
-          className="form__input-text"
+          className="form__select"
           name="species"
           id="species"
           onChange={handleChange}

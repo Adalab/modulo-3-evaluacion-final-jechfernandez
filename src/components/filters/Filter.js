@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/Filter.scss';
+import '../../stylesheets/filters/Filter.scss';
 import FilterByName from './FilterByName';
 import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
@@ -14,7 +14,9 @@ const Filter = props => {
     return(
         <>
         <section>
-            <form onSubmit={handleSubmit}>
+            <form 
+            className="form__container"
+            onSubmit={handleSubmit}>
                 <FilterByName handleFilter={props.handleFilter}/>
                 <FilterByGender handleFilter={props.handleFilter}/>
                 <FilterBySpecies handleFilter={props.handleFilter}/>

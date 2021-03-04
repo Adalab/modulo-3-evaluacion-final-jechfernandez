@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import '../stylesheets/Header.scss';
+import '../stylesheets/layout/Header.scss';
 import logo from '../images/logo-rick-n-morty.png'
 
 export default function Header () {

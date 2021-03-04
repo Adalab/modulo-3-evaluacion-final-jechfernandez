@@ -1,0 +1,28 @@
+@import '../core/_reset.scss';
+@import '../core/_mixins.scss';
+@import '../core/_variables.scss';
+
+
+.form{
+
+    &__label{
+        color: $color-detail;
+        font-family: $font-title;
+        font-size: 25px;
+        background-color: $color-background;
+        margin-right: 10px;
+    }
+
+    &__select{
+    width: 150px;
+    height: 40px;
+    background: $color-background;
+    color: white;
+    font-family: $font-main;
+    border: 1px solid $color-detail;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-right: 20px;
+
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../stylesheets/filters/FilterByName.scss';
 
 const FilterByName = props => {
 
@@ -9,13 +10,15 @@ const FilterByName = props => {
     }
     return(
         <>
-        <label htmlFor="name">
+        <label className="form__label" htmlFor="name">
             Filter by name:
         </label>
-        <input type="text" 
+        <input 
+        className="form__input"
+        type="text" 
         name="name" 
         id="name" 
-        placeholder="Character's name goes here"
+        placeholder="You know what to do"
         onChange={handleChange}/>
         </>
     )

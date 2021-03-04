@@ -1,19 +1,25 @@
-@import './core/_reset.scss';
-@import './core/_mixins.scss';
-@import './core/_variables.scss';
+@import '../core/_reset.scss';
+@import '../core/_mixins.scss';
+@import '../core/_variables.scss';
 
 .detail {
 
+    display: flex;
     padding-top: 30px;
+    align-items: center;
+    justify-content: center;
 
   &__notfound {
-    background: url('../images/pickle.png') no-repeat;
+    background: url('../../images/pickle.png') no-repeat;
     object-fit: contain;
-    width: 100vw;
     height: 100vh;
 
-    @include desktop {
-      background: url('../images/pickle-desktop.png') no-repeat;
+    
+
+    @include tablet {
+      background: url('../../images/pickle-desktop.png') no-repeat;
+      background-size: auto;
+      object-fit: contain;
     }
 
     &--close {

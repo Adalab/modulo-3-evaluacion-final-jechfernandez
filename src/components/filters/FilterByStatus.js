@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../stylesheets/filters/FilterBySelect.scss';
 
 const FilterByStatus = props => {
 
@@ -10,10 +11,13 @@ const FilterByStatus = props => {
 
     return(
         <>
-        <label htmlFor="status">
+        <label 
+        className= "form__label"
+        htmlFor="status">
             Status:
         </label>
         <select 
+        className= "form__select"
         name="status" 
         id="status"
         onChange={handleChange}>
