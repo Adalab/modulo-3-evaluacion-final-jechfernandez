@@ -1,5 +1,15 @@
-body {
+@import './core/_variables.scss';
+@import './core/_reset.scss';
+@import './core/_mixins.scss';
+
+.landing {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.page {
   margin: 0;
+  background-color: $color-background;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

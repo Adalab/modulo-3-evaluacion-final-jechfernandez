@@ -1,24 +1,31 @@
 import React from 'react';
 import '../stylesheets/CharacterDetail.scss';
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
-const CharacterDetail = (props) => {
-  console.log(props);
+const CharacterDetail = props => {
+  console.log (props);
 
-  if (props.character === undefined){
-    return(
-      <>
-      <Link to="/">
-                <span className="modal__close icon fas fa-undo">X</span>
-              </Link>
-      <div className="modal__text-error">
-      <p>Error: character not found</p>
+  if (props.character === undefined) {
+    return (
+      <div className="detail__notfound">
+        <Link to="/">
+          <span className="detail__notfound--close fas fa-arrow-left"></span>
+          <span className="detail__notfound--tmb">Take me back home</span>
+        </Link>
       </div>
-      </>
-    )
+    );
   }
 
-  const { name, image, gender, status, origin, location, species, episode } = props.character;
+  const {
+    name,
+    image,
+    gender,
+    status,
+    origin,
+    location,
+    species,
+    episode,
+  } = props.character;
 
   return (
     <div>
@@ -32,7 +39,7 @@ const CharacterDetail = (props) => {
         </h4>
         <img className="" src={image} alt={name} />
         <p className="">
-          <span className="">Gender:</span> 
+          <span className="">Gender:</span>
           <span className="">{gender}</span>
         </p>
         <p className="">
@@ -56,7 +63,6 @@ const CharacterDetail = (props) => {
 };
 
 export default CharacterDetail;
-
 
 // const CharacterDetail = props => {
 

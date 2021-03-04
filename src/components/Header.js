@@ -1,12 +1,21 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import '../stylesheets/Header.scss';
+import logo from '../images/logo-rick-n-morty.png'
 
 export default function Header () {
   return (
-    <div>
-
-      <h1>Rick and Morty - Character Searcher</h1>
-
-    </div>
+    <header className="header">
+      <Link to='/'>
+        
+        <img
+          className="header__img"
+          src={logo}
+          title="Go to home"
+          alt="Rick and Morty logo"
+        />
+     </Link>
+    
+    </header>
   );
 }

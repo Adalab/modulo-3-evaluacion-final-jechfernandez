@@ -1,0 +1,37 @@
+@import './core/_reset.scss';
+@import './core/_mixins.scss';
+@import './core/_variables.scss';
+
+.detail {
+
+    padding-top: 30px;
+
+  &__notfound {
+    background: url('../images/pickle.png') no-repeat;
+    object-fit: contain;
+    width: 100vw;
+    height: 100vh;
+
+    @include desktop {
+      background: url('../images/pickle-desktop.png') no-repeat;
+    }
+
+    &--close {
+      color: $color-icon;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+    }
+
+    &--tmb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-icon;
+      font-family: $font-title;
+      font-size: 25px;
+      margin-top: 30px;
+    }
+  }
+}
