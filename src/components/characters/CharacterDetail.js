@@ -1,87 +1,73 @@
 import React from 'react';
 import '../../stylesheets/characters/CharacterDetail.scss';
 import {Link} from 'react-router-dom';
+import image from '../../images/pickle.png';
 
 const CharacterDetail = props => {
-  console.log (props);
-
   if (props.character === undefined) {
     return (
-      <div className="detail__notfound">
-        <Link to="/">
-          <span className="detail__notfound--close fas fa-arrow-left"></span>
-          <span className="detail__notfound--tmb">Take me back home</span>
-        </Link>
+      <div className="detail__error">
+        <header className="detail__error--link">
+          <Link to="/">
+            <span className="detail__error--notfound">Take me back home</span>
+          </Link>
+        </header>
+
+        <div className="detail__img">
+          <img
+            className="detail__img--error"
+            src={image}
+            alt="Error, not found"
+          />
+        </div>
       </div>
     );
+  } else {
+    return (
+      <article className="detail">
+        
+          <div className="detail__info">
+
+          <div detail__link>
+           <Link to="/">
+            <p className="detail__link--close">Got it, take me back</p>
+          </Link>
+        </div>
+
+            <img
+              className="detail__info--img"
+              src={props.character.image}
+              alt={props.character.name}
+            />
+            <h4 className="detail__info--name">
+              {props.character.name}
+            </h4>
+            <p className="detail__info--parragraph">
+              <span className="detail__info--span">Gender:</span>
+              <span className="detail__info--span">{props.character.gender}</span>
+            </p>
+            <p className="detail__info--parragraph">
+              <span className="detail__info--span">Species:</span>
+              {' '}
+              <span className="detail__info--span">{props.character.species}</span>
+            </p>
+            <p className="detail__info--parragraph">
+              <span className="detail__info--span">Status:</span>
+              {' '}
+              <span className="detail__info--span">{props.character.status}</span>
+            </p>
+            <p className="detail__info--parragraph">
+              <span className="detail__info--span">Origin:</span> {props.character.origin}
+            </p>
+            <p className="detail__info--parragraph">
+              <span className="detail__info--span">Location:</span> {props.character.location}
+            </p>
+            <p className="detail__info--parragraph">
+              <span className="detail__info--span">Episodes:</span> {props.character.episode}
+            </p>
+          </div>
+      </article>
+    );
   }
-
-  const {
-    name,
-    image,
-    gender,
-    status,
-    origin,
-    location,
-    species,
-    episode,
-  } = props.character;
-
-  return (
-    <div>
-      <Link to="/">
-        <span className="">X</span>
-      </Link>
-
-      <div className="">
-        <h4 className="">
-          {name}
-        </h4>
-        <img className="" src={image} alt={name} />
-        <p className="">
-          <span className="">Gender:</span>
-          <span className="">{gender}</span>
-        </p>
-        <p className="">
-          <span className="">Species:</span> <span className="">{species}</span>
-        </p>
-        <p className="">
-          <span className="">Status:</span> <span className="">{status}</span>
-        </p>
-        <p className="">
-          <span className="">Origin:</span> {origin}
-        </p>
-        <p className="">
-          <span className="">Location:</span> {location}
-        </p>
-        <p className="">
-          <span className="">Episodes:</span> {episode}
-        </p>
-      </div>
-    </div>
-  );
 };
-
 export default CharacterDetail;
-
-// const CharacterDetail = props => {
-
-//   const { routerProps, api } = props;
-//     const characterId = parseInt(routerProps.match.params.characterId);
-
-//     if (characterId > api.length) {
-//         return (
-//             <div>
-//                 <p>Sorry, we don't really know what you're looking for. There’s a lesson here and I’m not going to be the one to figure it out.</p>
-//                 <Link to="/" >Back to homepage</Link>
-//             </div>
-//         );
-//     }
-//   return (
-//     <div className="CharacterDetail">
-//       <h1>Holi</h1>
-//     </div>
-//   );
-// };
-
-// export default CharacterDetail;

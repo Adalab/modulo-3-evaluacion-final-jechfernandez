@@ -5,17 +5,17 @@ import Character from './Character';
 const CharacterList = props => {
   const characterElements = props.characters.map (character => {
     return (
-      <li key={character.id}>
+      <li className="character__list" key={character.id}>
         <Character character={character} />
       </li>
     );
   });
   return (
-    <section>
-      <ul>
+    <article className="character__article">
+      <ul className="list">
         {characterElements}
       </ul>
-    </section>
+    </article>
   );
 };
 
