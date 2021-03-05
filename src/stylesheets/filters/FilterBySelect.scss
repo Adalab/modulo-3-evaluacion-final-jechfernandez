@@ -10,6 +10,10 @@
         font-size: 25px;
         background-color: $color-background;
         margin-right: 10px;
+
+        @include tablet{
+            text-align: right;
+        }
     }
 
     &__select{
@@ -27,6 +31,7 @@
     @include tablet{
         width: 150px;
         margin-right: 20px;
+        align-content: initial;
     }
 
     }

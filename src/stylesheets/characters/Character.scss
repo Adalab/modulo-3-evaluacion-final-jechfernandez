@@ -20,8 +20,7 @@
 
     &--img {
       grid-row: 3/4;
-      max-width: 190px;
-      border-radius: 50%;
+      width: 100%;
     }
 
     &--name {
@@ -35,16 +34,16 @@
       font-size: 20px;
     }
 
-    &--info{
-        font-family: $font-main;
-        grid-row: 4/5;
-        margin-top: 15px;
-        color: $color-icon;
-        text-transform: capitalize;
+    &--info {
+      font-family: $font-main;
+      grid-row: 4/5;
+      margin-top: 15px;
+      color: $color-icon;
+      text-transform: capitalize;
 
-        &-span{
-          background-color: $color-background;
-        }
+      &-span {
+        background-color: $color-background;
+      }
     }
   }
 }
