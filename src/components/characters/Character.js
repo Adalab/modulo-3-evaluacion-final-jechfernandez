@@ -17,13 +17,16 @@ const Character = props => {
 
   return (
     <Link className="link character" to={`/character/${id}`}>
-      <div className="card">
-        <img className="character__img" src={image} alt="Character" />
+      <div className="character__card">
+        <img className="character__card--img" src={image} alt="Character" />
 
-        <div className="character__text">
-          <h3 className="character__text--name">{name} {statusIcon ()}</h3>
-          <p className="character__text--info">{gender}</p>
-          <p className="character__text--info">{species}</p>
+        <div className="character__card--name">
+          <h3 className="character__card--text-name">{name} {statusIcon ()}</h3>
+        </div>
+
+        <div className="character__card--info">
+          <p className="character__card--text-info">{gender}</p>
+          <span className="character__card--text-info">{species}</span>
         </div>
       </div>
     </Link>

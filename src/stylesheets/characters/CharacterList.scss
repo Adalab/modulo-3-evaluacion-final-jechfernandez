@@ -2,11 +2,19 @@
 @import '../core/_variables.scss';
 
 .list{
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, minmax(rem(50), 100));
   grid-gap: rem(10);
 
+
+  @include tablet{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .character {
   &__article {
@@ -36,4 +44,6 @@
 
     // }
   }
+
+
 }

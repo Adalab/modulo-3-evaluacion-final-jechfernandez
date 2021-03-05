@@ -11,10 +11,10 @@ const FilterBySpecies = props => {
     return (
       <>
         <label
-        className="form__label"
+        className="form__label hidden "
         htmlFor="species">Species:</label>
         <select
-          className="form__select"
+          className="form__select hidden"
           name="species"
           id="species"
           onChange={handleChange}

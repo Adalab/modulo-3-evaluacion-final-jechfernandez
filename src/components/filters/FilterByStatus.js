@@ -12,12 +12,12 @@ const FilterByStatus = props => {
     return(
         <>
         <label 
-        className= "form__label"
+        className= "form__label hidden"
         htmlFor="status">
             Status:
         </label>
         <select 
-        className= "form__select"
+        className= "form__select hidden"
         name="status" 
         id="status"
         onChange={handleChange}>
