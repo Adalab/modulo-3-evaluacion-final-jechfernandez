@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import CharacterList from './characters/CharacterList';
 import Filter from './filters/Filter';
 import getDataFromApi from './services/getDatafromApi';
+import localStorage from './services/localStorage';
 import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
@@ -18,6 +19,8 @@ function App () {
   useEffect (() => {
     getDataFromApi ().then (data => setCharacters (data));
   }, []);
+
+  
 
   const handleFilter = inputChange => {
     if (inputChange.key === 'name') {
