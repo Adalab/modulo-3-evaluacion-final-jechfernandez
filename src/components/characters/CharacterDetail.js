@@ -13,9 +13,9 @@ const CharacterDetail = props => {
           </Link>
         </header>
 
-        <div className="detail__img">
+        <div className="detail__error--img">
           <img
-            className="detail__img--error"
+            className="detail__error--img-src"
             src={image}
             alt="Error, not found"
           />
