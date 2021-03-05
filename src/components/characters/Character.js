@@ -9,7 +9,7 @@ const Character = props => {
     if (status === 'Alive') {
       return <i className="fas fa-heartbeat" />;
     } else if (status === 'Dead') {
-      return <i className="far fa-dizzy" />;
+      return <i className="fas fa-skull" />;
     } else {
       return <i className="fas fa-question" />;
     }

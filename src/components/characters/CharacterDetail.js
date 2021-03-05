@@ -24,7 +24,7 @@ const CharacterDetail = props => {
     );
   } else {
     return (
-      <article className="detail">
+      <div className="detail">
         
           <div className="detail__info">
 
@@ -66,7 +66,7 @@ const CharacterDetail = props => {
               <span className="detail__info--span">Episodes:</span> {props.character.episode}
             </p>
           </div>
-      </article>
+      </div>
     );
   }
 };
