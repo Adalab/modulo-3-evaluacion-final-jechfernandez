@@ -4,6 +4,7 @@ import FilterByName from './FilterByName';
 import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByStatus from './FilterByStatus'
+import Reset from '../Reset'
 
 const Filter = props => {
 
@@ -21,6 +22,7 @@ const Filter = props => {
                 <FilterByGender handleFilter={props.handleFilter}/>
                 <FilterBySpecies handleFilter={props.handleFilter}/>
                 <FilterByStatus handleFilter={props.handleFilter}/>
+                <Reset />
             </form>
         </section>
         </>
