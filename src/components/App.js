@@ -37,6 +37,7 @@ function App () {
     .filter (character => {
       return character.name.toUpperCase ().includes (name.toUpperCase ());
     })
+    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
     .filter (character => {
       if (gender === 'all') {
         return true;
