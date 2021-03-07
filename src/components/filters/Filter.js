@@ -4,7 +4,7 @@ import FilterByName from './FilterByName';
 import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByStatus from './FilterByStatus'
-import Reset from '../Reset'
+import ResetButton from '../ResetButton';
 
 const Filter = props => {
 
@@ -18,11 +18,11 @@ const Filter = props => {
             <form 
             className="form__container"
             onSubmit={handleSubmit}>
-                <FilterByName handleFilter={props.handleFilter}/>
+                <FilterByName handleFilter={props.handleFilter} handleReset={props.handleReset}/>
                 <FilterByGender handleFilter={props.handleFilter}/>
                 <FilterBySpecies handleFilter={props.handleFilter}/>
                 <FilterByStatus handleFilter={props.handleFilter}/>
-                <Reset />
+                <ResetButton handleReset={props.handleReset} />
             </form>
         </section>
         </>

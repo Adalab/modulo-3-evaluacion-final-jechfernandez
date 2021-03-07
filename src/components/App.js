@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import CharacterList from './characters/CharacterList';
 import Filter from './filters/Filter';
 import getDataFromApi from './services/getDatafromApi';
-import localStorage from './services/localStorage';
 import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
@@ -72,6 +71,14 @@ function App () {
     return < CharacterDetail character={selectCharacter}/>
   }
 
+  const handleReset = () => {
+    setCharacters(characters);
+    setName('');
+    setGender('all');
+    setSpecies('all');
+    setStatus('all');
+  };
+
 
   return (
     <div className="app">
@@ -79,7 +86,7 @@ function App () {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Filter handleFilter={handleFilter} />
+            <Filter handleFilter={handleFilter} handleReset={handleReset} />
             <CharacterList characters={filterCharacter} />
           </Route>
           <Route path="/character/:id" render={renderDetail} />

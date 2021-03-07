@@ -22,6 +22,27 @@ const CharacterDetail = props => {
         </div>
       </div>
     );
+
+  } else if 
+    (props.character.length === 0) {
+      return (
+        <div className="detail__error">
+          <header className="detail__error--link">
+            <Link to="/">
+              <span className="detail__error--notfound">Take me back home</span>
+            </Link>
+          </header>
+  
+          <div className="detail__error--img">
+            <img
+              className="detail__error--img-src"
+              src={image}
+              alt="Error, not found"
+            />
+          </div>
+        </div>
+      );
+  
   } else {
     return (
       <div className="detail">
