@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../stylesheets/filters/FilterByName.scss';
+import PropTypes from 'prop-types';
 
 
 const FilterByName = props => {
@@ -24,5 +25,10 @@ const FilterByName = props => {
         </>
     )
 }
+
+FilterByName.propTypes = {
+    handleFilter: PropTypes.func,
+  };
+  
 
 export default FilterByName;

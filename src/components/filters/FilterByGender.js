@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../stylesheets/filters/FilterBySelect.scss';
-
+import PropTypes from 'prop-types';
 
 const FilterByGender = props => {
 

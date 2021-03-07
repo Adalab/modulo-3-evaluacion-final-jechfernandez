@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../stylesheets/characters/CharacterList.scss';
 import Character from './Character';
 import geez from '../../images/404.jpg'
@@ -31,5 +32,10 @@ function CharacterList(props) {
       );
   }
 }
+
+CharacterList.propTypes = {
+  characters: PropTypes.array.isRequired,
+};
+
 export default CharacterList;
 

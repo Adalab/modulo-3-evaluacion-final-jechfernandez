@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../stylesheets/characters/CharacterDetail.scss';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import image from '../../images/pickle.png';
 
@@ -91,4 +92,17 @@ const CharacterDetail = props => {
     );
   }
 };
+
+CharacterDetail.propTypes ={
+  name: PropTypes.string,
+  image: PropTypes.string,
+  gender: PropTypes.string,
+  status: PropTypes.string,
+  origin: PropTypes.string,
+  location: PropTypes.string,
+  species: PropTypes.string,
+  episodes: PropTypes.number,
+  id: PropTypes.number,
+};
+
 export default CharacterDetail;

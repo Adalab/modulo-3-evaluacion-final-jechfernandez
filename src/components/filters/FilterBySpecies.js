@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../stylesheets/filters/FilterBySelect.scss';
+import PropTypes from 'prop-types';
 
 const FilterBySpecies = props => {
     const handleChange = (ev) => {
@@ -26,4 +27,9 @@ const FilterBySpecies = props => {
       </>
     );
   };
+
+  FilterBySpecies.propTypes = {
+    handleFilter: PropTypes.func,
+  };
+  
   export default FilterBySpecies;

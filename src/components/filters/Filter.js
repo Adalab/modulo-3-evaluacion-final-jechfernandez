@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../stylesheets/filters/Filter.scss';
+import PropTypes from 'prop-types';
 import FilterByName from './FilterByName';
 import FilterByGender from './FilterByGender';
 import FilterBySpecies from './FilterBySpecies';
@@ -28,5 +29,10 @@ const Filter = props => {
         </>
     )
 }
+
+Filter.propTypes = {
+    name: PropTypes.string,
+    handleFilter: PropTypes.func.isRequired,
+  };
 
 export default Filter;
