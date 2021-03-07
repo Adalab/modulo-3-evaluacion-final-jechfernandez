@@ -70,7 +70,7 @@ function App () {
   };
 
   const handleReset = () => {
-    setCharacters (characters);
+    // setCharacters (characters);
     setName ('');
     setGender ('all');
     setSpecies ('all');
