@@ -35,12 +35,12 @@ const Character = props => {
 };
 
 Character.propType = {
-    name: PropTypes.string,
-    image: PropTypes.string,
-    gender: PropTypes.string,
-    species: PropTypes.string,
-    status: PropTypes.string,
-    id: PropTypes.number,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  gender: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
+  id: PropTypes.number,
 };
 
 export default Character;

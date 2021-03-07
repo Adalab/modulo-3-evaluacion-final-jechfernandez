@@ -19,6 +19,3 @@ const getDataFromApi = () => {
 };
 
 export default getDataFromApi;
-
-//NO OLVIDAR CAMBIAR A API
-//('//rickandmortyapi.com/api/character/')

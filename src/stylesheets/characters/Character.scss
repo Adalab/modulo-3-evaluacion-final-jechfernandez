@@ -20,9 +20,7 @@
   &__card {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4rem 2rem 12rem 5rem;
-    
-    
+    grid-template-rows: 5rem 2rem 12rem 5rem;
 
     &--img {
       grid-row: 3/4;
@@ -38,8 +36,6 @@
       border-radius: 5px;
       font-family: $font-title;
       font-size: 20px;
-
-      
     }
 
     &--info {
@@ -48,6 +44,8 @@
       margin-top: 15px;
       color: $color-icon;
       text-transform: capitalize;
+      background-color: $color-background;
+      border-radius: 40%;
 
       &-span {
         background-color: $color-background;

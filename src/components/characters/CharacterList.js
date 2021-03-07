@@ -2,16 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../../stylesheets/characters/CharacterList.scss';
 import Character from './Character';
-import geez from '../../images/404.jpg'
+import geez from '../../images/404.jpg';
 
-function CharacterList(props) {
-  const characterElements = props.characters.map(character => {
-      return <li key={character.id} className="character__list"> <Character character={character} /> </li>
-  })
+function CharacterList (props) {
+  const characterElements = props.characters.map (character => {
+    return (
+      <li key={character.id} className="character__list">
+        {' '}<Character character={character} />{' '}
+      </li>
+    );
+  });
   if (characterElements.length === 0) {
-      return (
-        <div className="detail__error">
-        
+    return (
+      <div className="detail__error">
+
         <div className="detail__error--img">
           <img
             className="detail__error--img-src"
@@ -20,16 +24,15 @@ function CharacterList(props) {
           />
         </div>
       </div>
-      )
+    );
   } else {
-
-      return (
-        <article className="character__article">
-               <ul className="list">
-                 {characterElements}
-               </ul>
-             </article>
-      );
+    return (
+      <article className="character__article">
+        <ul className="list">
+          {characterElements}
+        </ul>
+      </article>
+    );
   }
 }
 
@@ -38,4 +41,3 @@ CharacterList.propTypes = {
 };
 
 export default CharacterList;
-

@@ -1,24 +1,21 @@
 @import '../core/_mixins.scss';
 @import '../core/_variables.scss';
 
+.form {
+  &__label {
+    color: $color-detail;
+    font-family: $font-title;
+    font-size: 25px;
+    background-color: $color-background;
+    margin-left: 10px;
+    margin-right: 10px;
 
-.form{
-
-    &__label{
-        color: $color-detail;
-        font-family: $font-title;
-        font-size: 25px;
-        background-color: $color-background;
-        margin-left: 10px;
-        margin-right: 10px;
-        
-
-        @include tablet{
-        display: inline;
-        }
+    @include tablet {
+      display: inline;
     }
+  }
 
-    &__input{
+  &__input {
     width: 200px;
     height: 40px;
     background: $color-background;
@@ -27,12 +24,9 @@
     border: 1px solid $color-detail;
     border-radius: 6px;
     text-align: center;
-    
 
-    @include tablet{
-    margin-right: 20px;    
+    @include tablet {
+      margin-right: 20px;
     }
-    }
-
-    
+  }
 }

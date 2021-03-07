@@ -1,22 +1,20 @@
 @import '../core/_mixins.scss';
 @import '../core/_variables.scss';
 
+.form {
+  &__label {
+    color: $color-detail;
+    font-family: $font-title;
+    font-size: 25px;
+    background-color: $color-background;
+    margin-right: 10px;
 
-.form{
-
-    &__label{
-        color: $color-detail;
-        font-family: $font-title;
-        font-size: 25px;
-        background-color: $color-background;
-        margin-right: 10px;
-
-        @include tablet{
-            text-align: right;
-        }
+    @include tablet {
+      text-align: right;
     }
+  }
 
-    &__select{
+  &__select {
     width: 200px;
     height: 40px;
     background: $color-background;
@@ -26,22 +24,19 @@
     border-radius: 6px;
     padding-left: 10px;
     padding-right: 10px;
-    
 
-    @include tablet{
-        width: 150px;
-        margin-right: 20px;
-        align-content: initial;
+    @include tablet {
+      width: 150px;
+      margin-right: 20px;
+      align-content: initial;
     }
-
-    }
+  }
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 
-@include desktop {
+  @include desktop {
     display: inline-flex;
-}
-
+  }
 }

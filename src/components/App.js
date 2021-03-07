@@ -19,8 +19,6 @@ function App () {
     getDataFromApi ().then (data => setCharacters (data));
   }, []);
 
-  
-
   const handleFilter = inputChange => {
     if (inputChange.key === 'name') {
       setName (inputChange.value);
@@ -37,7 +35,7 @@ function App () {
     .filter (character => {
       return character.name.toUpperCase ().includes (name.toUpperCase ());
     })
-    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
+    .sort ((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
     .filter (character => {
       if (gender === 'all') {
         return true;
@@ -62,24 +60,22 @@ function App () {
 
   console.log (filterCharacter);
 
-
-  const renderDetail = (props) => {
-    console.log(props.match.params);
-    const id = parseInt(props.match.params.id);
-    const selectCharacter = characters.find( character =>{
+  const renderDetail = props => {
+    console.log (props.match.params);
+    const id = parseInt (props.match.params.id);
+    const selectCharacter = characters.find (character => {
       return character.id === id;
-    })
-    return < CharacterDetail character={selectCharacter}/>
-  }
-
-  const handleReset = () => {
-    setCharacters(characters);
-    setName('');
-    setGender('all');
-    setSpecies('all');
-    setStatus('all');
+    });
+    return <CharacterDetail character={selectCharacter} />;
   };
 
+  const handleReset = () => {
+    setCharacters (characters);
+    setName ('');
+    setGender ('all');
+    setSpecies ('all');
+    setStatus ('all');
+  };
 
   return (
     <div className="app">
