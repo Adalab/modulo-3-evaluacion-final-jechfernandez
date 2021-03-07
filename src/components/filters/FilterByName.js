@@ -16,6 +16,7 @@ const FilterByName = props => {
       </label>
       <input
         className="form__input"
+        value={props.name}
         type="text"
         name="name"
         id="name"

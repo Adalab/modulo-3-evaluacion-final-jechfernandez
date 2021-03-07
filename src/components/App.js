@@ -7,6 +7,7 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import CharacterDetail from './characters/CharacterDetail';
+import FilterByStatus from './filters/FilterByStatus';
 
 function App () {
   const [characters, setCharacters] = useState ([]);
@@ -70,7 +71,7 @@ function App () {
   };
 
   const handleReset = () => {
-    // setCharacters (characters);
+    setCharacters (characters);
     setName ('');
     setGender ('all');
     setSpecies ('all');
@@ -83,7 +84,13 @@ function App () {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Filter handleFilter={handleFilter} handleReset={handleReset} />
+            <Filter 
+            name={name}
+            gender={gender}
+            species={species} 
+            status={status}
+            handleFilter={handleFilter} 
+            handleReset={handleReset} />
             <CharacterList characters={filterCharacter} />
           </Route>
           <Route path="/character/:id" render={renderDetail} />

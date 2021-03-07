@@ -15,6 +15,7 @@ const FilterByGender = props => {
       </label>
       <select
         className="form__select"
+        value={props.gender}
         name="gender"
         id="gender"
         onChange={handleChange}

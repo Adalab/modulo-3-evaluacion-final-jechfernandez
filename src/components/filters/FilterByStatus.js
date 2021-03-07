@@ -17,6 +17,7 @@ const FilterByStatus = props => {
       </label>
       <select
         className="form__select hidden"
+        value={props.status}
         name="status"
         id="status"
         onChange={handleChange}
