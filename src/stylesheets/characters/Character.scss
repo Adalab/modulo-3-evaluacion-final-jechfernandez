@@ -13,10 +13,16 @@
   box-shadow: 5px 5px 10px $color-icon;
   border: 3px solid $color-detail;
 
+  &:hover {
+    transform: scale(1.05);
+  }
+
   &__card {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4rem 2rem 12rem 5rem;
+    
+    
 
     &--img {
       grid-row: 3/4;
@@ -32,6 +38,8 @@
       border-radius: 5px;
       font-family: $font-title;
       font-size: 20px;
+
+      
     }
 
     &--info {

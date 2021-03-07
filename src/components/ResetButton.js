@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/filters/Reset.scss';
+import '../stylesheets/filters/ResetButton.scss';
 import PropTypes from 'prop-types';
 
 const ResetButton = (props) => {
@@ -7,7 +7,7 @@ const ResetButton = (props) => {
       props.handleReset();
     };
     return (
-        <div>
+        <div className='reset'>
             <button className='reset__button' onClick={handleReset}>
             <i className="reset__button--icon fas fa-reply"></i>
             </button>

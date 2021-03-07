@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../stylesheets/characters/CharacterList.scss';
 import Character from './Character';
-import {Link} from 'react-router-dom';
-import whoops from '../../images/pickle.png'
+import geez from '../../images/404.jpg'
 
 function CharacterList(props) {
   const characterElements = props.characters.map(character => {
@@ -11,16 +10,11 @@ function CharacterList(props) {
   if (characterElements.length === 0) {
       return (
         <div className="detail__error">
-        <header className="detail__error--link">
-          <Link to="/">
-            <span className="detail__error--notfound">Take me back home</span>
-          </Link>
-        </header>
-
+        
         <div className="detail__error--img">
           <img
             className="detail__error--img-src"
-            src={whoops}
+            src={geez}
             alt="Error, not found"
           />
         </div>

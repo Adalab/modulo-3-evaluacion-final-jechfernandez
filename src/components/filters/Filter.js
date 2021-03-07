@@ -22,8 +22,8 @@ const Filter = props => {
                 <FilterByGender handleFilter={props.handleFilter}/>
                 <FilterBySpecies handleFilter={props.handleFilter}/>
                 <FilterByStatus handleFilter={props.handleFilter}/>
-                <ResetButton handleReset={props.handleReset} />
             </form>
+            <ResetButton handleReset={props.handleReset} />
         </section>
         </>
     )
