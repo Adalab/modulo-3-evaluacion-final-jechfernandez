@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 import '../../stylesheets/filters/FilterBySelect.scss';
 
 const FilterByGender = props => {
@@ -15,6 +16,7 @@ const FilterByGender = props => {
       </label>
       <select
         className="form__select"
+        value={props.gender}
         name="gender"
         id="gender"
         onChange={handleChange}
@@ -28,5 +30,10 @@ const FilterByGender = props => {
     </Fragment>
   );
 };
+
+FilterByGender.propTypes = {
+  gender: PropTypes.string,
+};
+
 
 export default FilterByGender;

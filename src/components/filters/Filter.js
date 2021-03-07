@@ -15,10 +15,10 @@ const Filter = props => {
   return (
     <section>
       <form className="form__container" onSubmit={handleSubmit}>
-        <FilterByName handleFilter={props.handleFilter} />
-        <FilterByGender handleFilter={props.handleFilter} />
-        <FilterBySpecies handleFilter={props.handleFilter} />
-        <FilterByStatus handleFilter={props.handleFilter} />
+        <FilterByName handleFilter={props.handleFilter} name={props.name}/>
+        <FilterByGender handleFilter={props.handleFilter} gender={props.gender}/>
+        <FilterBySpecies handleFilter={props.handleFilter} species={props.species}/>
+        <FilterByStatus handleFilter={props.handleFilter} status={props.status} />
       </form>
       <ResetButton handleReset={props.handleReset} />
     </section>
@@ -27,7 +27,11 @@ const Filter = props => {
 
 Filter.propTypes = {
   name: PropTypes.string,
+  gender: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func,
 };
 
 export default Filter;

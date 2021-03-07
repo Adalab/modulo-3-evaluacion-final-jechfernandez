@@ -14,6 +14,7 @@ const FilterBySpecies = props => {
       <label className="form__label hidden " htmlFor="species">Species:</label>
       <select
         className="form__select hidden"
+        value={props.species}
         name="species"
         id="species"
         onChange={handleChange}
@@ -28,6 +29,7 @@ const FilterBySpecies = props => {
 
 FilterBySpecies.propTypes = {
   handleFilter: PropTypes.func,
+  species: PropTypes.string,
 };
 
 export default FilterBySpecies;

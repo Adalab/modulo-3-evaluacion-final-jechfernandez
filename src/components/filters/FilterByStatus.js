@@ -17,6 +17,7 @@ const FilterByStatus = props => {
       </label>
       <select
         className="form__select hidden"
+        value={props.status}
         name="status"
         id="status"
         onChange={handleChange}
@@ -32,6 +33,7 @@ const FilterByStatus = props => {
 
 FilterByStatus.propTypes = {
   handleFilter: PropTypes.func,
+  status: PropTypes.string,
 };
 
 export default FilterByStatus;
