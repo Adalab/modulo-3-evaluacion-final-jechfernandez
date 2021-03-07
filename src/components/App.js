@@ -7,7 +7,6 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import CharacterDetail from './characters/CharacterDetail';
-import FilterByStatus from './filters/FilterByStatus';
 
 function App () {
   const [characters, setCharacters] = useState ([]);

@@ -29,6 +29,7 @@ const FilterBySpecies = props => {
 
 FilterBySpecies.propTypes = {
   handleFilter: PropTypes.func,
+  species: PropTypes.string,
 };
 
 export default FilterBySpecies;

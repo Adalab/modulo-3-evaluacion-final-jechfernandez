@@ -33,6 +33,7 @@ const FilterByStatus = props => {
 
 FilterByStatus.propTypes = {
   handleFilter: PropTypes.func,
+  status: PropTypes.string,
 };
 
 export default FilterByStatus;

@@ -29,6 +29,7 @@ const FilterByName = props => {
 
 FilterByName.propTypes = {
   handleFilter: PropTypes.func,
+  name: PropTypes.string,
 };
 
 export default FilterByName;
