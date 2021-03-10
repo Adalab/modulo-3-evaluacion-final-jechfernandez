@@ -26,10 +26,6 @@ const Filter = props => {
 };
 
 Filter.propTypes = {
-  name: PropTypes.string,
-  gender: PropTypes.string,
-  species: PropTypes.string,
-  status: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func,
 };

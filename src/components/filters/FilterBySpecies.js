@@ -33,3 +33,4 @@ FilterBySpecies.propTypes = {
 };
 
 export default FilterBySpecies;
+
