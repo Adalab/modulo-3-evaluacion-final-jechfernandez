@@ -30,6 +30,6 @@ There were some bonuses such as:
 ### Link
 
 Here's the link to my project: 
-https://beta.adalab.es/modulo-3-evaluacion-final-jechfernandez/
+http://jechfernandez.github.io/modulo-3-evaluacion-final-jechfernandez/
 
 Any questions? Comments? Just let me know :-)
